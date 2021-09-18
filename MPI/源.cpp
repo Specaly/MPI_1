@@ -3,32 +3,8 @@
 #include <string.h>
 #include<math.h>
 #include<time.h>
-/*int main(int argc, char **argv)
-{
-	int id,num,source;
-	MPI_Status status;
-	char message[100];
-	MPI_Init(&argc,&argv);
-	MPI_Comm_rank(MPI_COMM_WORLD, &id);
-	MPI_Comm_size(MPI_COMM_WORLD, &num);
-	if (id != 0)
-	{
-		strcpy_s(message, "Hello world!");
-		MPI_Send(message, strlen(message) + 1, MPI_CHAR, 0, 99, MPI_COMM_WORLD);
-	}
-	else
-	{
-		for (source = 1; source < num; source++)
-		{
-			MPI_Recv(message, 100, MPI_CHAR, source, 99, MPI_COMM_WORLD, &status);
-			printf("I am process %d. I receive string '%s' from process %d.\n",id, message, source);
-		}
-	}
-
-	MPI_Finalize();
-	return 0;
-}*/
-
+//--------------------------------------------------------------------
+//此段为题一
 #define N 1000
 int main(int argc, char** argv)
 {
@@ -57,7 +33,10 @@ int main(int argc, char** argv)
 	}
 	MPI_Finalize();
 }
+//------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------------------
+//此段为题二
 /*int main(int argc, char** argv)
 {
 	double bg, ed;
@@ -91,15 +70,5 @@ int main(int argc, char** argv)
 	}
 	MPI_Finalize();
 }
-int main()
-{
-	float dx = 90.0 / N;
-	int i;
-	float x,sum=0.0;
-	for (i = 0; i < N; i++)
-	{
-		x = 10 + i * dx + dx / 2;
-		sum += x * x * x * dx;
-	}
-	printf("%f", sum);
-}*/
+*/
+//------------------------------------------------------------------------
